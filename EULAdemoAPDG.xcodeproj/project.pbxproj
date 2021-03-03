@@ -33,6 +33,8 @@
 		9C4DB3D825EF656E001AA4F9 /* placeholder-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4DB3D725EF656E001AA4F9 /* placeholder-1.png */; };
 		9C4DB3EB25EF6A76001AA4F9 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3E925EF6A76001AA4F9 /* MealTableViewCell.swift */; };
 		9C4DB3EC25EF6A76001AA4F9 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4DB3EA25EF6A76001AA4F9 /* MealTableViewCell.xib */; };
+		9C4DB3F325EF700C001AA4F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3F125EF700C001AA4F9 /* DetailViewController.swift */; };
+		9C4DB3F425EF700C001AA4F9 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4DB3F225EF700C001AA4F9 /* DetailViewController.xib */; };
 		C76B8779D3E41474F2ABC489 /* Pods_EULAdemoAPDGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E420816F541280A41BA8E /* Pods_EULAdemoAPDGTests.framework */; };
 		E7BA44C9F0B24E9D019B9A36 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,8 @@
 		9C4DB3D725EF656E001AA4F9 /* placeholder-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-1.png"; sourceTree = "<group>"; };
 		9C4DB3E925EF6A76001AA4F9 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		9C4DB3EA25EF6A76001AA4F9 /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
+		9C4DB3F125EF700C001AA4F9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9C4DB3F225EF700C001AA4F9 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B190A02CF0EC89DE3558FDE8 /* Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDG-EULAdemoAPDGUITests/Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF759F0EC248937357315434 /* Pods-EULAdemoAPDGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDGTests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDGTests/Pods-EULAdemoAPDGTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		9C04220125EF43D60015A04F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9C4DB3F025EF6FF8001AA4F9 /* DetailMeal */,
 				9C4DB3A125EF4C79001AA4F9 /* Search */,
 			);
 			path = Modules;
@@ -324,6 +329,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9C4DB3F025EF6FF8001AA4F9 /* DetailMeal */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3F125EF700C001AA4F9 /* DetailViewController.swift */,
+				9C4DB3F225EF700C001AA4F9 /* DetailViewController.xib */,
+			);
+			path = DetailMeal;
+			sourceTree = "<group>";
+		};
 		BC0FA3A82546848C90DC514C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0421DB25EF43900015A04F /* LaunchScreen.storyboard in Resources */,
+				9C4DB3F425EF700C001AA4F9 /* DetailViewController.xib in Resources */,
 				9C4DB3D825EF656E001AA4F9 /* placeholder-1.png in Resources */,
 				9C4DB3EC25EF6A76001AA4F9 /* MealTableViewCell.xib in Resources */,
 				9C0421D825EF43900015A04F /* Assets.xcassets in Resources */,
@@ -597,6 +612,7 @@
 				9C4DB3B525EF4F0D001AA4F9 /* SearchModel.swift in Sources */,
 				9C04220E25EF44F00015A04F /* RequesProtocol.swift in Sources */,
 				9C04220F25EF44F00015A04F /* Services.swift in Sources */,
+				9C4DB3F325EF700C001AA4F9 /* DetailViewController.swift in Sources */,
 				9C4DB3A625EF4CF5001AA4F9 /* SearchInteractor.swift in Sources */,
 				9C04220D25EF44F00015A04F /* StockURL.swift in Sources */,
 				9C4DB39525EF4A4F001AA4F9 /* RequestSearch.swift in Sources */,

@@ -75,7 +75,13 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var item = self.data[indexPath.row]
+        
+        if item != nil{
+            self.interactor?.getDetailElement(idmeal: item.idMeal)
+        }
+    }
     
 }
 
@@ -91,14 +97,10 @@ extension ViewController:PresenterToViewProtocol {
     
     
     func displayData(items: [SearchModel]) {
-        
         self.data = items
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
-        //self.interactor?.getDetailElement(idmeal: items[0].idMeal)
-        
     }
     
     func goToDetailMeal(mealDetail: MealsDetail) {
@@ -106,7 +108,6 @@ extension ViewController:PresenterToViewProtocol {
     }
     
     func displayBanner(meal: SearchModel) {
-        dump("Actualizar")
         DispatchQueue.main.async {
             let imageURL = URL(string: meal.photo)
             self.imageViewBanner.af_setImage(withURL: imageURL!)
@@ -121,8 +122,9 @@ extension ViewController:PresenterToViewProtocol {
 
 extension ViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
-    let text = searchController.searchBar.text
-    self.interactor?.getElementsWithSearch(stringSearch: "lasa")
-    
+    guard let text = searchController.searchBar.text else { return  }
+    if text.count > 2 {
+        self.interactor?.getElementsWithSearch(stringSearch: text)
+    }
   }
 }

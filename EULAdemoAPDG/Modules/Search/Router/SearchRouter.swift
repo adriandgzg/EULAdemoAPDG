@@ -15,8 +15,8 @@ class SearchRouter{
         self.view = view
     }
     func goToDetail(Mealdetail:MealsDetail){
-        dump(Mealdetail)
-        //TODO:AquiMandaA llamar a tu pantalla
-
+        let vc : DetailViewController =  DetailViewController(nibName: "DetailViewController", bundle: nil) //change this to your class name
+        vc.mealDetail = Mealdetail
+        view?.present(vc, animated: true, completion: nil)
     }
 }
