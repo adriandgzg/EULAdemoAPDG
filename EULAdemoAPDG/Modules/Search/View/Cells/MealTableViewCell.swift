@@ -29,10 +29,13 @@ class MealTableViewCell: UITableViewCell {
         imageMeal?.af_setImage(withURL: URL(string: SearchItem.photo)!)
         imageMeal.layer.cornerRadius = 6
         imageMeal.clipsToBounds = true
-        
+
     }
     
     
     
     
 }
+
+
+

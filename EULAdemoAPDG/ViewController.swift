@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     /*Outlet*/
     @IBOutlet weak var imageViewBanner: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var footerView: UIView!
+    @IBOutlet weak var viewShadow: UIView!
     
     let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
@@ -26,14 +27,21 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        
+        footerView.addBordersShadow()
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search Meals"
         navigationItem.searchController = searchController
         definesPresentationContext = true
         self.tableView.register(UINib(nibName: "MealTableViewCell",bundle: nil), forCellReuseIdentifier: "MealTableViewCell")
         self.navigationController?.navigationItem.searchController = searchController
+        self.title = "UALA"
+        
+        
+        imageViewBanner.layer.cornerRadius = 8
+        imageViewBanner.clipsToBounds = true
+        viewShadow.addBordersShadow()
+        
         interactor = InteractorSearch(view: self)
         router = SearchRouter(view:self)
         
