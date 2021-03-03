@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,PresenterToViewProtocol {
+class ViewController: UIViewController {
     
     var interactor : interactorProtocol?
     var data:[SearchModel]  = []
@@ -24,13 +24,13 @@ class ViewController: UIViewController,PresenterToViewProtocol {
 }
 
 
-extension ViewController:PresenterToViewProtocol {
+extension ViewController:PresenterToViewProtocol {
     
     func displayData(items: [SearchModel]) {
         
         self.data = items
         
-        self.interactor?.getDetailElement(index: 0)
+        self.interactor?.getDetailElement(idmeal: items[0].idMeal)
         
     }
     
