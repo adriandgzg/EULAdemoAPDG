@@ -19,18 +19,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
+    let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Candies"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        self.tableView.register(UINib(nibName: "MealTableViewCell",bundle: nil), forCellReuseIdentifier: "MealTableViewCell")
+        self.navigationController?.navigationItem.searchController = searchController
         interactor = InteractorSearch(view: self)
         router = SearchRouter(view:self)
-        self.tableView.register(UINib(nibName: "MealTableViewCell",bundle: nil), forCellReuseIdentifier: "MealTableViewCell")
         
-        interactor?.getElementsWithSearch(stringSearch: "lasa")
+        
+        
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -108,3 +119,10 @@ extension ViewController:PresenterToViewProtocol {
 
 
 
+extension ViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    let text = searchController.searchBar.text
+    self.interactor?.getElementsWithSearch(stringSearch: "lasa")
+    
+  }
+}
