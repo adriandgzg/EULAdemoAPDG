@@ -25,20 +25,30 @@ class InteractorSearch:interactorProtocol {
         
         AsyncManager.shared.requestExecute(request) { (response:ResponseSearch) in
             self.presenter?.updateSearchElements(items: response.meals ?? [])
-            
-            dump(response)
         } errorCompletition: { (err) in
             dump(err)
         }
     }
     
     func getDetailElement(idmeal:String) {
-        ///TODO:Detalle de producto
-        dump("irAlDetalle")
-        dump(idmeal)
+        let requeslookup = RequestLookup(id: idmeal)
         
+        AsyncManager.shared.requestExecute(requeslookup) { (response:LookupResponse) in
+            dump(response)
+            
         
-        
+            var item = response.meals?.filter({ (meal) -> Bool in
+                meal.idMeal == idmeal ? true:false
+            }).first
+            
+            if let mealD = item {
+                self.presenter?.goToDetailSelection(meals: mealD)
+            }else{
+                dump("error")
+            }
+        } errorCompletition: { (err) in
+            dump(err)
+        }
     }
     
     

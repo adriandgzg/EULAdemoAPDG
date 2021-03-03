@@ -10,17 +10,20 @@ import Foundation
 
 protocol PresenterProtocol{
     func updateSearchElements(items:[Meals])
-    func goToDetailSelection(idMeal:String)
+    func goToDetailSelection(meals:MealsDetail)
     
 }
 
 protocol PresenterToViewProtocol {
     func displayData(items:[SearchModel])
     func UpdateBanner()
+    func goToDetailMeal(mealDetail:MealsDetail)
 }
 
 
 class SearchPresenter:PresenterProtocol {
+   
+    
  
     var interactor : InteractorSearch?
     var view :PresenterToViewProtocol?
@@ -46,8 +49,8 @@ class SearchPresenter:PresenterProtocol {
         
     }
     
-    func goToDetailSelection(idMeal:String) {
-        
+    func goToDetailSelection(meals: MealsDetail) {
+        self.view?.goToDetailMeal(mealDetail: meals)
     }
     
     

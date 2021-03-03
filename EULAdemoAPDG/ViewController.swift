@@ -11,12 +11,15 @@ class ViewController: UIViewController {
     
     var interactor : interactorProtocol?
     var data:[SearchModel]  = []
-    
+    var router:SearchRouter? = nil
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor = InteractorSearch(view: self)
+        router = SearchRouter(view:self)
+        
+        
         interactor?.getElementsWithSearch(stringSearch: "lasa")
     }
 
@@ -25,6 +28,8 @@ class ViewController: UIViewController {
 
 
 extension ViewController:PresenterToViewProtocol {
+  
+    
     
     func displayData(items: [SearchModel]) {
         
@@ -38,5 +43,10 @@ extension ViewController:PresenterToViewProtocol {
         
     }
     
+    func goToDetailMeal(mealDetail: MealsDetail) {
+        self.router?.goToDetail(Mealdetail: mealDetail)
+    }
 }
+
+
 
