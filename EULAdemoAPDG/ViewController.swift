@@ -16,13 +16,19 @@ class ViewController: UIViewController {
     
     /*Outlet*/
     @IBOutlet weak var imageViewBanner: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         interactor = InteractorSearch(view: self)
         router = SearchRouter(view:self)
-        
+        self.tableView.register(UINib(nibName: "MealTableViewCell",bundle: nil), forCellReuseIdentifier: "MealTableViewCell")
         
         interactor?.getElementsWithSearch(stringSearch: "lasa")
     }
@@ -42,6 +48,31 @@ class ViewController: UIViewController {
 }
 
 
+extension ViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MealTableViewCell", for: indexPath) as! MealTableViewCell
+        if self.data[indexPath.row] != nil {
+            cell.configureCell(SearchItem: self.data[indexPath.row])
+        }
+        
+        return cell
+        
+    }
+    
+    
+    
+    
+}
+
+extension ViewController:UISearchBarDelegate{
+    
+}
+
+
 extension ViewController:PresenterToViewProtocol {
     
     
@@ -51,8 +82,11 @@ extension ViewController:PresenterToViewProtocol {
     func displayData(items: [SearchModel]) {
         
         self.data = items
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         
-        self.interactor?.getDetailElement(idmeal: items[0].idMeal)
+        //self.interactor?.getDetailElement(idmeal: items[0].idMeal)
         
     }
     
@@ -69,6 +103,8 @@ extension ViewController:PresenterToViewProtocol {
     }
     
 }
+
+
 
 
 

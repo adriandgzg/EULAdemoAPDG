@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ASf-rv-GbM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Nzm-AA-nyt">
+            <objects>
+                <navigationController id="ASf-rv-GbM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TB2-X4-vfl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rAN-RN-IPx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEU-VV-I5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="46"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -34,17 +50,27 @@
                                     <constraint firstItem="oWv-Fw-Sez" firstAttribute="leading" secondItem="Iul-qx-D5b" secondAttribute="leading" constant="16" id="iTg-04-LvH"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-6H-lxR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="P3F-6H-lxR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Quf-Ml-DrU"/>
+                            <constraint firstItem="P3F-6H-lxR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VLs-xU-vQr"/>
                             <constraint firstItem="Iul-qx-D5b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vem-B7-lJM"/>
                             <constraint firstItem="Iul-qx-D5b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WAe-UF-aUH"/>
+                            <constraint firstItem="Iul-qx-D5b" firstAttribute="top" secondItem="P3F-6H-lxR" secondAttribute="bottom" constant="8" symbolic="YES" id="lhS-6n-pKU"/>
                             <constraint firstAttribute="bottom" secondItem="Iul-qx-D5b" secondAttribute="bottom" id="nwS-SA-TKD"/>
+                            <constraint firstItem="P3F-6H-lxR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sPU-LR-h44"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WJh-ej-VxU"/>
                     <connections>
                         <outlet property="imageViewBanner" destination="oWv-Fw-Sez" id="Ack-ZR-63u"/>
+                        <outlet property="tableView" destination="P3F-6H-lxR" id="fqy-uu-cAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

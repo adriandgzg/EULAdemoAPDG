@@ -31,6 +31,8 @@
 		9C4DB3CE25EF5BC0001AA4F9 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3CD25EF5BC0001AA4F9 /* SearchRouter.swift */; };
 		9C4DB3D325EF5F9D001AA4F9 /* RequestRandomContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3D225EF5F9D001AA4F9 /* RequestRandomContent.swift */; };
 		9C4DB3D825EF656E001AA4F9 /* placeholder-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4DB3D725EF656E001AA4F9 /* placeholder-1.png */; };
+		9C4DB3EB25EF6A76001AA4F9 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3E925EF6A76001AA4F9 /* MealTableViewCell.swift */; };
+		9C4DB3EC25EF6A76001AA4F9 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4DB3EA25EF6A76001AA4F9 /* MealTableViewCell.xib */; };
 		C76B8779D3E41474F2ABC489 /* Pods_EULAdemoAPDGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E420816F541280A41BA8E /* Pods_EULAdemoAPDGTests.framework */; };
 		E7BA44C9F0B24E9D019B9A36 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		9C4DB3CD25EF5BC0001AA4F9 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		9C4DB3D225EF5F9D001AA4F9 /* RequestRandomContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRandomContent.swift; sourceTree = "<group>"; };
 		9C4DB3D725EF656E001AA4F9 /* placeholder-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-1.png"; sourceTree = "<group>"; };
+		9C4DB3E925EF6A76001AA4F9 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		9C4DB3EA25EF6A76001AA4F9 /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
 		AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B190A02CF0EC89DE3558FDE8 /* Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDG-EULAdemoAPDGUITests/Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF759F0EC248937357315434 /* Pods-EULAdemoAPDGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDGTests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDGTests/Pods-EULAdemoAPDGTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +155,6 @@
 				9C0421CE25EF438F0015A04F /* AppDelegate.swift */,
 				9C0421D025EF438F0015A04F /* SceneDelegate.swift */,
 				9C0421D225EF438F0015A04F /* ViewController.swift */,
-				9C0421D425EF438F0015A04F /* Main.storyboard */,
 				9C4DB3D725EF656E001AA4F9 /* placeholder-1.png */,
 				9C0421D725EF43900015A04F /* Assets.xcassets */,
 				9C0421D925EF43900015A04F /* LaunchScreen.storyboard */,
@@ -253,6 +256,7 @@
 		9C4DB3A125EF4C79001AA4F9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9C4DB3DC25EF6A3D001AA4F9 /* View */,
 				9C4DB3AD25EF4D58001AA4F9 /* Models */,
 				9C4DB3A425EF4CC7001AA4F9 /* Router */,
 				9C4DB3A325EF4CC2001AA4F9 /* Presenter */,
@@ -300,6 +304,24 @@
 				9C4DB3C325EF5A15001AA4F9 /* MealsDetail.swift */,
 			);
 			path = LookupResponse;
+			sourceTree = "<group>";
+		};
+		9C4DB3DC25EF6A3D001AA4F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3DD25EF6A48001AA4F9 /* Cells */,
+				9C0421D425EF438F0015A04F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C4DB3DD25EF6A48001AA4F9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3E925EF6A76001AA4F9 /* MealTableViewCell.swift */,
+				9C4DB3EA25EF6A76001AA4F9 /* MealTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BC0FA3A82546848C90DC514C /* Frameworks */ = {
@@ -435,6 +457,7 @@
 			files = (
 				9C0421DB25EF43900015A04F /* LaunchScreen.storyboard in Resources */,
 				9C4DB3D825EF656E001AA4F9 /* placeholder-1.png in Resources */,
+				9C4DB3EC25EF6A76001AA4F9 /* MealTableViewCell.xib in Resources */,
 				9C0421D825EF43900015A04F /* Assets.xcassets in Resources */,
 				9C0421D625EF438F0015A04F /* Main.storyboard in Resources */,
 			);
@@ -578,6 +601,7 @@
 				9C04220D25EF44F00015A04F /* StockURL.swift in Sources */,
 				9C4DB39525EF4A4F001AA4F9 /* RequestSearch.swift in Sources */,
 				9C0421D325EF438F0015A04F /* ViewController.swift in Sources */,
+				9C4DB3EB25EF6A76001AA4F9 /* MealTableViewCell.swift in Sources */,
 				9C0421CF25EF438F0015A04F /* AppDelegate.swift in Sources */,
 				9C4DB3C525EF5A15001AA4F9 /* MealsDetail.swift in Sources */,
 				9C0421D125EF438F0015A04F /* SceneDelegate.swift in Sources */,
