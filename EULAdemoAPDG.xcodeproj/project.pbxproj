@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		9C04220D25EF44F00015A04F /* StockURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04220A25EF44F00015A04F /* StockURL.swift */; };
 		9C04220E25EF44F00015A04F /* RequesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04220B25EF44F00015A04F /* RequesProtocol.swift */; };
 		9C04220F25EF44F00015A04F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04220C25EF44F00015A04F /* Services.swift */; };
+		9C4DB39525EF4A4F001AA4F9 /* RequestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB39425EF4A4F001AA4F9 /* RequestSearch.swift */; };
 		C76B8779D3E41474F2ABC489 /* Pods_EULAdemoAPDGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E420816F541280A41BA8E /* Pods_EULAdemoAPDGTests.framework */; };
 		E7BA44C9F0B24E9D019B9A36 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		9C04220A25EF44F00015A04F /* StockURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockURL.swift; sourceTree = "<group>"; };
 		9C04220B25EF44F00015A04F /* RequesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequesProtocol.swift; sourceTree = "<group>"; };
 		9C04220C25EF44F00015A04F /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		9C4DB39425EF4A4F001AA4F9 /* RequestSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSearch.swift; sourceTree = "<group>"; };
 		AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B190A02CF0EC89DE3558FDE8 /* Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDG-EULAdemoAPDGUITests/Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF759F0EC248937357315434 /* Pods-EULAdemoAPDGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDGTests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDGTests/Pods-EULAdemoAPDGTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		9C04220925EF44620015A04F /* RequestModels */ = {
 			isa = PBXGroup;
 			children = (
+				9C4DB39425EF4A4F001AA4F9 /* RequestSearch.swift */,
 			);
 			path = RequestModels;
 			sourceTree = "<group>";
@@ -230,7 +233,6 @@
 				161D5CA8A03C2F45B2D60371 /* Pods-EULAdemoAPDGTests.debug.xcconfig */,
 				BF759F0EC248937357315434 /* Pods-EULAdemoAPDGTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -475,6 +477,7 @@
 				9C04220E25EF44F00015A04F /* RequesProtocol.swift in Sources */,
 				9C04220F25EF44F00015A04F /* Services.swift in Sources */,
 				9C04220D25EF44F00015A04F /* StockURL.swift in Sources */,
+				9C4DB39525EF4A4F001AA4F9 /* RequestSearch.swift in Sources */,
 				9C0421D325EF438F0015A04F /* ViewController.swift in Sources */,
 				9C0421CF25EF438F0015A04F /* AppDelegate.swift in Sources */,
 				9C0421D125EF438F0015A04F /* SceneDelegate.swift in Sources */,

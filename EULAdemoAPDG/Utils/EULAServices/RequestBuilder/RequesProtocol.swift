@@ -1,11 +1,3 @@
-//
-//  RequesPRotocol.swift
-//  SACM
-//
-//  Created by Adrian Dominguez Gómez on 04/12/19.
-//  Copyright © 2019 Adrián Pascual Domínguez. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import AlamofireObjectMapper

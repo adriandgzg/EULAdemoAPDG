@@ -11,10 +11,9 @@ open class AsyncManager : NSObject{
     public static let shared = AsyncManager()
     
    let sessionManager = Alamofire.SessionManager()
-    var access_tokens : SessionToken? = nil
     public var backentProtocol  = "https://"
     public var backentHost =  "www.themealdb.com/api/json/v1/1/"
-    var cookie:String = ""
+   
     
     
     
@@ -34,13 +33,6 @@ open class AsyncManager : NSObject{
     
     func getRequestForRetry()-> RequestProtocol? {
         return self.requestRetry
-    }
-    
-    open func setCookie(str:String){
-        self.cookie = str
-    }
-    func getCookie()-> String{
-        return self.cookie
     }
     
     open func setRetryBlock(bloque: @escaping blckChangeHeader ){
@@ -153,16 +145,3 @@ extension AsyncManager {
     }
 }
 
-class SessionToken {
-    
-    var expires_in : Int?
-    var access_token : String?
-    var refresh_token : String?
-
-    init(expire:Int, acces:String, refresh:String)
-    {
-        self.expires_in = expire
-        self.access_token = acces
-        self.refresh_token = refresh
-    }
-}
