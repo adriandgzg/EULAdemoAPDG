@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewShadow: UIView!
     
     let searchController = UISearchController(searchResultsController: nil)
+    var bannerMeal : SearchModel? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,13 +46,28 @@ class ViewController: UIViewController {
         interactor = InteractorSearch(view: self)
         router = SearchRouter(view:self)
         
-        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageViewBanner.isUserInteractionEnabled = true
+        imageViewBanner.addGestureRecognizer(tapGestureRecognizer)
+      
+
+     
         
         
         
         
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        if let mealID  = self.bannerMeal?.idMeal {
+            self.interactor?.getDetailElement(idmeal:mealID)
+        }
+        
+        
+
+        
+    // Your action
+    }
     override func viewDidAppear(_ animated: Bool) {
         self.interactor?.inicializeRandomVideos()
     }
@@ -115,7 +131,9 @@ extension ViewController:PresenterToViewProtocol {
         self.router?.goToDetail(Mealdetail: mealDetail)
     }
     
+  
     func displayBanner(meal: SearchModel) {
+        bannerMeal = meal
         DispatchQueue.main.async {
             let imageURL = URL(string: meal.photo)
             self.imageViewBanner.af_setImage(withURL: imageURL!)

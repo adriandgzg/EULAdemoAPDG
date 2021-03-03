@@ -7,38 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4F995F13-5D3B-43AD-A9F8-4DE0832EF475"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EULAdemoAPDG/Modules/Search/Presenter/SearchPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "updateSearchElements(items:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "50DB6D57-0FCC-4C4A-B899-623EAB59EBEF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EULAdemoAPDG/Modules/Search/Presenter/SearchPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "goToDetailSelection(meals:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7AE09E75-D915-4156-B34A-1F462BB6DE57"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -71,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D28E89F4-96C7-41CB-912C-75CC309C884C"
-            shouldBeEnabled = "Yes"
+            uuid = "0D007479-B7BD-47AF-A9AC-9981A571BC4D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EULAdemoAPDG/Modules/Search/Interactor/SearchInteractor.swift"
+            filePath = "EULAdemoAPDG/Modules/Search/Presenter/SearchPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "getRamdomVideo()"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "updateSearchElements(items:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
