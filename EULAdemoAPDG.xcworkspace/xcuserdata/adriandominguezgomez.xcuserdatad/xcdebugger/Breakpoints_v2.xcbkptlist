@@ -30,8 +30,8 @@
             filePath = "EULAdemoAPDG/Modules/Search/Presenter/SearchPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "updateSearchElements(items:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "EULAdemoAPDG/Modules/Search/Presenter/SearchPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "goToDetailSelection(meals:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -97,22 +97,6 @@
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "goToDetail(Mealdetail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D0CFEE07-75DD-4D36-A9F5-79CE8A164101"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EULAdemoAPDG/Modules/Search/Presenter/SearchPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "updateBanner(meal:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

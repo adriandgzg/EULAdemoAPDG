@@ -60,19 +60,11 @@ extension ViewController:PresenterToViewProtocol {
         self.router?.goToDetail(Mealdetail: mealDetail)
     }
     
-    func displayBanner(meal: MealsDetail) {
+    func displayBanner(meal: SearchModel) {
         dump("Actualizar")
         DispatchQueue.main.async {
-            if let urlImage = meal.strMealThumb {
-                
-                var imageURL = URL(string: urlImage)
-                var defimage = URL(string: "https://i2.wp.com/hospitalrealsanlucas.com.mx/wp-content/uploads/2020/11/placeholder-1.png?ssl=1")
-                self.imageViewBanner.af_setImage(withURL: imageURL ?? defimage!)
-                
-                 //URL(string: "https://i2.wp.com/hospitalrealsanlucas.com.mx/wp-content/uploads/2020/11/placeholder-1.png?ssl=1")
-                
-                
-            }
+            let imageURL = URL(string: meal.photo)
+            self.imageViewBanner.af_setImage(withURL: imageURL!)
         }
     }
     

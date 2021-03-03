@@ -60,7 +60,7 @@ class InteractorSearch:interactorProtocol {
     
     
     func inicializeRandomVideos() {
-        
+        self.getRamdomVideo()
         self.timer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { timer in
         
             self.getRamdomVideo()

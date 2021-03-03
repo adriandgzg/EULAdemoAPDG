@@ -18,15 +18,18 @@ protocol PresenterProtocol{
 protocol PresenterToViewProtocol {
     func displayData(items:[SearchModel])
     func goToDetailMeal(mealDetail:MealsDetail)
-    func displayBanner(meal:MealsDetail)
+    func displayBanner(meal:SearchModel)
 }
 
 
 class SearchPresenter:PresenterProtocol {
   
     func updateBanner(meal: MealsDetail) {
+        if let idmeal = meal.idMeal, let photo = meal.strMealThumb , let name =  meal.strMeal, let category = meal.strCategory {
+            let meal =  SearchModel(idMeal: idmeal, photo: photo , name: name, category: category)
             self.view?.displayBanner(meal: meal)
-                
+        }
+        dump("error")
     }
 
     
