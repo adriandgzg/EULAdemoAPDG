@@ -36,6 +36,9 @@ class InteractorSearch:interactorProtocol {
         ///TODO:Detalle de producto
         dump("irAlDetalle")
         dump(idmeal)
+        
+        
+        
     }
     
     
