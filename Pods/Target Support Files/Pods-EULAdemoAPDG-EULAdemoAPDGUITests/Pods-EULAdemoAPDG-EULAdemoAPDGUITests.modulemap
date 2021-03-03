@@ -1,0 +1,6 @@
+framework module Pods_EULAdemoAPDG_EULAdemoAPDGUITests {
+  umbrella header "Pods-EULAdemoAPDG-EULAdemoAPDGUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_EULAdemoAPDG {
+  umbrella header "Pods-EULAdemoAPDG-umbrella.h"
+
+  export *
+  module * { export * }
+}
