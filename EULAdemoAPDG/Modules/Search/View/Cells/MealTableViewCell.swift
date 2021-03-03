@@ -27,7 +27,8 @@ class MealTableViewCell: UITableViewCell {
         lblName.text = SearchItem.name
         lblCategory.text = SearchItem.category
         imageMeal?.af_setImage(withURL: URL(string: SearchItem.photo)!)
-        
+        imageMeal.layer.cornerRadius = 6
+        imageMeal.clipsToBounds = true
         
     }
     
