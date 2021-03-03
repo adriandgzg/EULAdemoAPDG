@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+struct SearchModel{
+    var idMeal : String
+    var photo: String
+    var name :String
+    var category:String
+
+}

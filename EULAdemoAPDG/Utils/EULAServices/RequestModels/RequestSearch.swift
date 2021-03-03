@@ -9,6 +9,11 @@ import UIKit
 
 class RequestSearch: RequestProtocol {
     var search = ""
+    
+    
+    init(searchString:String){
+        search = searchString
+    }
     func getQueryParams() -> Parameters? {
         return ["s":search]
     }

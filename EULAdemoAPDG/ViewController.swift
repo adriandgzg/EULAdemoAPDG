@@ -7,13 +7,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,PresenterToViewProtocol {
+    
+    var interactor : interactorProtocol?
+    var data:[SearchModel]  = []
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        interactor = InteractorSearch(view: self)
+        interactor?.getElementsWithSearch(stringSearch: "lasa")
     }
 
+   
+}
 
+
+extension ViewController:PresenterToViewProtocol {
+    
+    func displayData(items: [SearchModel]) {
+        
+        self.data = items
+        
+        self.interactor?.getDetailElement(index: 0)
+        
+    }
+    
+    func UpdateBanner() {
+        
+    }
+    
 }
 

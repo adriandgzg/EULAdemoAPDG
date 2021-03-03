@@ -20,6 +20,11 @@
 		9C04220E25EF44F00015A04F /* RequesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04220B25EF44F00015A04F /* RequesProtocol.swift */; };
 		9C04220F25EF44F00015A04F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04220C25EF44F00015A04F /* Services.swift */; };
 		9C4DB39525EF4A4F001AA4F9 /* RequestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB39425EF4A4F001AA4F9 /* RequestSearch.swift */; };
+		9C4DB39C25EF4BC5001AA4F9 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB39A25EF4BC5001AA4F9 /* Meals.swift */; };
+		9C4DB39D25EF4BC5001AA4F9 /* ResponseSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB39B25EF4BC5001AA4F9 /* ResponseSearch.swift */; };
+		9C4DB3A625EF4CF5001AA4F9 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3A525EF4CF5001AA4F9 /* SearchInteractor.swift */; };
+		9C4DB3B025EF4EC8001AA4F9 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3AF25EF4EC8001AA4F9 /* SearchPresenter.swift */; };
+		9C4DB3B525EF4F0D001AA4F9 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB3B425EF4F0D001AA4F9 /* SearchModel.swift */; };
 		C76B8779D3E41474F2ABC489 /* Pods_EULAdemoAPDGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E420816F541280A41BA8E /* Pods_EULAdemoAPDGTests.framework */; };
 		E7BA44C9F0B24E9D019B9A36 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +69,11 @@
 		9C04220B25EF44F00015A04F /* RequesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequesProtocol.swift; sourceTree = "<group>"; };
 		9C04220C25EF44F00015A04F /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		9C4DB39425EF4A4F001AA4F9 /* RequestSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSearch.swift; sourceTree = "<group>"; };
+		9C4DB39A25EF4BC5001AA4F9 /* Meals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		9C4DB39B25EF4BC5001AA4F9 /* ResponseSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSearch.swift; sourceTree = "<group>"; };
+		9C4DB3A525EF4CF5001AA4F9 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		9C4DB3AF25EF4EC8001AA4F9 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		9C4DB3B425EF4F0D001AA4F9 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		AF63BEDA8E510B82DD7A7AB5 /* Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EULAdemoAPDG_EULAdemoAPDGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B190A02CF0EC89DE3558FDE8 /* Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDG-EULAdemoAPDGUITests/Pods-EULAdemoAPDG-EULAdemoAPDGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF759F0EC248937357315434 /* Pods-EULAdemoAPDGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EULAdemoAPDGTests.release.xcconfig"; path = "Target Support Files/Pods-EULAdemoAPDGTests/Pods-EULAdemoAPDGTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +168,7 @@
 		9C04220125EF43D60015A04F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9C4DB3A125EF4C79001AA4F9 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 		9C04220825EF44440015A04F /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
+				9C4DB39925EF4B9F001AA4F9 /* SearchRequest */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -211,6 +223,57 @@
 				9C4DB39425EF4A4F001AA4F9 /* RequestSearch.swift */,
 			);
 			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		9C4DB39925EF4B9F001AA4F9 /* SearchRequest */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB39A25EF4BC5001AA4F9 /* Meals.swift */,
+				9C4DB39B25EF4BC5001AA4F9 /* ResponseSearch.swift */,
+			);
+			path = SearchRequest;
+			sourceTree = "<group>";
+		};
+		9C4DB3A125EF4C79001AA4F9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3AD25EF4D58001AA4F9 /* Models */,
+				9C4DB3A425EF4CC7001AA4F9 /* Router */,
+				9C4DB3A325EF4CC2001AA4F9 /* Presenter */,
+				9C4DB3A225EF4CBC001AA4F9 /* Interactor */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9C4DB3A225EF4CBC001AA4F9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3A525EF4CF5001AA4F9 /* SearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9C4DB3A325EF4CC2001AA4F9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3AF25EF4EC8001AA4F9 /* SearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9C4DB3A425EF4CC7001AA4F9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9C4DB3AD25EF4D58001AA4F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB3B425EF4F0D001AA4F9 /* SearchModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BC0FA3A82546848C90DC514C /* Frameworks */ = {
@@ -474,8 +537,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4DB3B025EF4EC8001AA4F9 /* SearchPresenter.swift in Sources */,
+				9C4DB39C25EF4BC5001AA4F9 /* Meals.swift in Sources */,
+				9C4DB39D25EF4BC5001AA4F9 /* ResponseSearch.swift in Sources */,
+				9C4DB3B525EF4F0D001AA4F9 /* SearchModel.swift in Sources */,
 				9C04220E25EF44F00015A04F /* RequesProtocol.swift in Sources */,
 				9C04220F25EF44F00015A04F /* Services.swift in Sources */,
+				9C4DB3A625EF4CF5001AA4F9 /* SearchInteractor.swift in Sources */,
 				9C04220D25EF44F00015A04F /* StockURL.swift in Sources */,
 				9C4DB39525EF4A4F001AA4F9 /* RequestSearch.swift in Sources */,
 				9C0421D325EF438F0015A04F /* ViewController.swift in Sources */,
