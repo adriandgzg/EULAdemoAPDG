@@ -10,14 +10,14 @@ import Alamofire
 
 
 class RequestLookup: RequestProtocol {
-    var search = ""
+    var idMeal = ""
     
     
-    init(searchString:String){
-        search = searchString
+    init(id:String){
+        idMeal = id
     }
     func getQueryParams() -> Parameters? {
-        return ["s":search]
+        return ["i":idMeal]
     }
     
     func getParameters() -> Parameters? {
